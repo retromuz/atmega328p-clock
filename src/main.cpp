@@ -106,13 +106,13 @@ void printTemp(int tempCX4) {
 }
 
 void printDateTime(const tmElements_t &tm, time_t t) {
-	printDay(tm);
-	printYear(tm);
-	printMon(tm);
-	printDate(tm);
-	printHour(tm);
-	printMin(tm);
 	printSec(tm);
+	printMin(tm);
+	printHour(tm);
+	printDay(tm);
+	printDate(tm);
+	printMon(tm);
+	printYear(tm);
 }
 
 void printDay(const tmElements_t &tm) {
@@ -211,7 +211,7 @@ void adj(tmElements_t &tm) {
 }
 
 int strcmpl(const char* s0, const char* s1, unsigned int len) {
-	for (int x = 0; x < len; x++) {
+	for (unsigned int x = 0; x < len; x++) {
 		if (s0[x] != s1[x]) {
 			return 1;
 		}
